@@ -1,0 +1,13 @@
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\UsingAvalaraTax.exe.config
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\UsingAvalaraTax.exe
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\UsingAvalaraTax.pdb
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\Avalara.AvaTax.RestClient.net45.dll
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\Newtonsoft.Json.dll
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\Avalara.AvaTax.RestClient.net45.pdb
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\Avalara.AvaTax.RestClient.net45.xml
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\bin\Debug\Newtonsoft.Json.xml
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\obj\Debug\UsingAvalaraTax.csprojResolveAssemblyReference.cache
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\obj\Debug\UsingAvalaraTax.csproj.CoreCompileInputs.cache
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\obj\Debug\UsingAvalaraTax.csproj.CopyComplete
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\obj\Debug\UsingAvalaraTax.exe
+F:\Documents\Comp Sci\C#\UsingAvalaraTax\UsingAvalaraTax\obj\Debug\UsingAvalaraTax.pdb
