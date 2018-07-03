@@ -27,12 +27,12 @@ namespace UsingAvalaraTax
             checkRegion();
             checkCountry();
             Console.WriteLine("Thank you for your time.");
-            MessageBox.Show("User entered valid input that does crash the program");
+            MessageBox.Show("User entered valid input that does not crash the program");
         }
 
         public static void checkStreet()
         {//checks if input for street is valid
-            Console.WriteLine("Please provide a Street Address for your company's address.");
+            Console.WriteLine("Please provide a Street Address for your company's address and do not punctuate.");
             while (check)
             {
                 check = false;
@@ -40,6 +40,12 @@ namespace UsingAvalaraTax
                 {
                     clientAddress.line1 = Console.ReadLine();
                     MessageBox.Show(clientAddress.line1);
+                    if(clientAddress.line1.Any(c => char.IsSymbol(c)) || clientAddress.line1.Any(c => char.IsPunctuation(c))
+                        || clientAddress.line1.All(c => char.IsWhiteSpace(c)))
+                    {
+                        check = true;
+                        Console.WriteLine("Please enter a valid Street Address");
+                    }
                 }
                 catch (Exception e)
                 {
@@ -53,7 +59,7 @@ namespace UsingAvalaraTax
 
         public static void checkCity()
         {//checks if input for city is valid. Excludes numbers
-            Console.WriteLine("Please provide a City for your company's address.");
+            Console.WriteLine("Please provide a City for your company's address and do not punctuate.");
             while (check)
             {
                 check = false;
@@ -61,8 +67,8 @@ namespace UsingAvalaraTax
                 {
                     clientAddress.city = Console.ReadLine();
                     MessageBox.Show(clientAddress.city);
-                    var isNumber = int.TryParse(clientAddress.city, out int n);
-                    if (isNumber)
+                    if (clientAddress.city.Any(c=>char.IsSymbol(c)) || clientAddress.city.Any(c=>char.IsPunctuation(c)) || clientAddress.city.Any(c=>char.IsNumber(c))
+                        || clientAddress.city.Any(c=>char.IsDigit(c)) || clientAddress.city.All(c=>char.IsWhiteSpace(c)))
                     {
                         check = true;
                         Console.WriteLine("Please enter a valid City");
@@ -79,7 +85,8 @@ namespace UsingAvalaraTax
         }
 
         public static void checkZip()
-        {//checks if input for zip code is valid. Cannot exclude letters because many countries use letters in zip codes
+        {//checks if input for zip code is valid. Cannot exclude letters because many countries use letters in zip codes.
+            //TODO:Need to either explicitly allow hyphens or single spaces
             Console.WriteLine("Please provide a Postal Code for your company's address.");
             while (check)
             {
@@ -88,6 +95,12 @@ namespace UsingAvalaraTax
                 {
                     clientAddress.postalCode = Console.ReadLine();
                     MessageBox.Show(clientAddress.postalCode);
+                    if ((clientAddress.postalCode.Any(c => char.IsSymbol(c)) || clientAddress.postalCode.Any(c => char.IsPunctuation(c))
+                        || clientAddress.postalCode.All(c => char.IsWhiteSpace(c))))
+                    {
+                        check = true;
+                        Console.WriteLine("Please enter a valid Postal Code");
+                    }
                 }
                 catch (Exception e)
                 {
@@ -131,8 +144,9 @@ namespace UsingAvalaraTax
                 {
                     clientAddress.region = Console.ReadLine();
                     MessageBox.Show(clientAddress.region);
-                    var isNumber = int.TryParse(clientAddress.region, out int n);
-                    if(isNumber)
+                    if(clientAddress.region.Any(c => char.IsSymbol(c)) || clientAddress.region.Any(c => char.IsPunctuation(c))
+                        || clientAddress.region.Any(c => char.IsNumber(c))
+                        || clientAddress.region.Any(c => char.IsDigit(c)) || clientAddress.region.All(c => char.IsWhiteSpace(c)))
                     {
                         check = true;
                         Console.WriteLine("Please enter a valid Region name");
@@ -158,8 +172,9 @@ namespace UsingAvalaraTax
                 {
                     clientAddress.country = Console.ReadLine();
                     MessageBox.Show(clientAddress.country);
-                    var isNumber = int.TryParse(clientAddress.country, out int n);
-                    if (isNumber)
+                    if (clientAddress.country.Any(c => char.IsSymbol(c)) || clientAddress.country.Any(c => char.IsPunctuation(c))
+                        || clientAddress.country.Any(c => char.IsNumber(c))
+                        || clientAddress.country.Any(c => char.IsDigit(c)) || clientAddress.country.All(c => char.IsWhiteSpace(c)))
                     {
                         check = true;
                         Console.WriteLine("Please enter a valid, US English friendly country name");
